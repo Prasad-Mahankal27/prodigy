@@ -1,0 +1,201 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .title {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .display {
+            font-size: 4rem;
+            font-weight: 300;
+            color: #333;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #e9ecef;
+            letter-spacing: 3px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .start {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .start:hover {
+            background: linear-gradient(45deg, #218838, #1ea471);
+        }
+
+        .pause {
+            background: linear-gradient(45deg, #ffc107, #fd7e14);
+            color: #333;
+        }
+
+        .pause:hover {
+            background: linear-gradient(45deg, #e0a800, #dc6502);
+        }
+
+        .reset {
+            background: linear-gradient(45deg, #dc3545, #e83e8c);
+            color: white;
+        }
+
+        .reset:hover {
+            background: linear-gradient(45deg, #c82333, #d91a72);
+        }
+
+        .lap {
+            background: linear-gradient(45deg, #007bff, #6610f2);
+            color: white;
+        }
+
+        .lap:hover {
+            background: linear-gradient(45deg, #0056b3, #520dc2);
+        }
+
+        .lap-times {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .lap-times h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .lap-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+            font-family: 'Courier New', monospace;
+        }
+
+        .lap-item:last-child {
+            border-bottom: none;
+        }
+
+        .lap-number {
+            font-weight: 600;
+            color: #6c757d;
+        }
+
+        .lap-time {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .no-laps {
+            color: #6c757d;
+            font-style: italic;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .display {
+                font-size: 2.5rem;
+                padding: 15px;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .controls {
+                gap: 10px;
+            }
+            
+            .btn {
+                min-width: 100px;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Custom scrollbar */
+        .lap-times::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .lap-times::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .lap-times::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+
+        .lap-times::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
